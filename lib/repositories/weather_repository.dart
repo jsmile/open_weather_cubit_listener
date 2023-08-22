@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../exceptions/weather_exception.dart';
-import '../../models/custom_error.dart';
-import '../../models/weather.dart';
-import '../../services/weather_api_service.dart';
+import '/exceptions/weather_exception.dart';
+import '/models/custom_error.dart';
+import '/models/weather.dart';
+import '/services/weather_api_service.dart';
 
-import '../models/direct_geocoding.dart';
-import '../utils/ansi_color.dart';
+import '/models/direct_geocoding.dart';
+import '/utils/ansi_color.dart';
 
 class WeatherRepository {
   final WeatherApiService weatherApiService;

@@ -2,11 +2,11 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../repositories/weather_repository.dart';
+import '/repositories/weather_repository.dart';
 
-import '../../utils/ansi_color.dart';
-import '../../models/custom_error.dart';
-import '../../models/weather.dart';
+import '/utils/ansi_color.dart';
+import '/models/custom_error.dart';
+import '/models/weather.dart';
 
 part 'weather_state.dart';
 

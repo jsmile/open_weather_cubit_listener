@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../utils/ansi_color.dart';
+import '/utils/ansi_color.dart';
 
 part 'temp_settings_state.dart';
 
