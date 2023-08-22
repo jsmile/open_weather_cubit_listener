@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:open_weather_cubit/cubits/temp_settings/temp_settings_cubit.dart';
+import '../../cubits/temp_settings/temp_settings_cubit.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:open_weather_cubit/exceptions/weather_exception.dart';
-import 'package:open_weather_cubit/models/custom_error.dart';
-import 'package:open_weather_cubit/models/weather.dart';
-import 'package:open_weather_cubit/services/weather_api_service.dart';
+import '../../exceptions/weather_exception.dart';
+import '../../models/custom_error.dart';
+import '../../models/weather.dart';
+import '../../services/weather_api_service.dart';
 
 import '../models/direct_geocoding.dart';
 import '../utils/ansi_color.dart';

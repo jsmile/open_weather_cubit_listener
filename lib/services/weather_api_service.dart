@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import 'package:open_weather_cubit/constants/constants.dart';
-import 'package:open_weather_cubit/exceptions/weather_exception.dart';
-import 'package:open_weather_cubit/models/direct_geocoding.dart';
-import 'package:open_weather_cubit/models/weather.dart';
+import '../../constants/constants.dart';
+import '../../exceptions/weather_exception.dart';
+import '../../models/direct_geocoding.dart';
+import '../../models/weather.dart';
 
 import '../utils/ansi_color.dart';
 import 'http_error_handler.dart';

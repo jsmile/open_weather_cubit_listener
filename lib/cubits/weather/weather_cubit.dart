@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:open_weather_cubit/repositories/weather_repository.dart';
+import '../../repositories/weather_repository.dart';
 
 import '../../utils/ansi_color.dart';
 import '../../models/custom_error.dart';

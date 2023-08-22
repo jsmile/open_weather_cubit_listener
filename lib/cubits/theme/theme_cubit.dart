@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:open_weather_cubit/constants/constants.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../constants/constants.dart';
 
 import '../../utils/ansi_color.dart';
 import '../weather/weather_cubit.dart';
