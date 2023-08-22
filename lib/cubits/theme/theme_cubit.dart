@@ -1,39 +1,27 @@
-import 'dart:async';
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../constants/constants.dart';
 
+import '../../constants/constants.dart';
 import '../../utils/ansi_color.dart';
-import '../weather/weather_cubit.dart';
 
 part 'theme_state.dart';
 
+// Weather 정보를 사용하는 StreamSubscription 을 사용하지 않고
+// BlocListener 를 사용하도록 불필요한 정보 제거한 뒤
+// 처리가 필요한 정보를 param 으로 사용하는 함수 생성
 class ThemeCubit extends Cubit<ThemeState> {
-  // Theme를 처리하기 위해 Weather 정보가 필요함(구독신청을 위해).
-  final WeatherCubit weatherCubit;
-  late final StreamSubscription weatherSubscription;
+  ThemeCubit() : super(ThemeState.initial());
 
-  ThemeCubit({
-    required this.weatherCubit,
-  }) : super(ThemeState.initial()) {
-    weatherSubscription =
-        // WeatherState 를 listen 하고 있다가
-        weatherCubit.stream.listen((WeatherState weatherState) {
-      debugPrint(info('### weatherState : $weatherState'));
+  // 현재 온도에 따라 Teheme 을 변경.
+  // 필요한 정보를 param 으로 받아서 처리.
+  void setTheme(double currentTemp) {
+    if (currentTemp > kWarmOrNot) {
+      emit(state.copyWith(appTheme: AppTheme.light));
+    } else {
+      emit(state.copyWith(appTheme: AppTheme.dark));
+    }
 
-      if (weatherState.weather.temp > kWarmOrNot) {
-        emit(state.copyWith(appTheme: AppTheme.light));
-      } else {
-        emit(state.copyWith(appTheme: AppTheme.dark));
-      }
-    });
-  }
-
-  @override
-  Future<void> close() {
-    weatherSubscription.cancel();
-    return super.close();
+    debugPrint(info('### Theme State : $state'));
   }
 }
