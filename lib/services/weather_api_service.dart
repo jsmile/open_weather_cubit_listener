@@ -30,6 +30,8 @@ class WeatherApiService {
       },
     );
 
+    debugPrint(success('### getDirectGeocoding uri : $uri'));
+
     try {
       final http.Response response = await httpClient.get(uri);
       if (response.statusCode != 200) {
@@ -67,7 +69,7 @@ class WeatherApiService {
       },
     );
 
-    debugPrint(success('### uri : $uri'));
+    debugPrint(success('### getWeather uri : $uri'));
 
     try {
       final http.Response response = await httpClient.get(uri);
